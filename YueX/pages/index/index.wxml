@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view id="header">
+  <!--<button id="publish_activity" url="../post/post" hover-class="navigator-hover">发起活动</button>-->
+  <button id="publish_activity" type="default" bindtap="actionSheetTap">What is more?</button>
+</view>
+<view id="container" style="left: {{containerLeft+'px'}}"  class="container">
+<view class="photos">
+  <swiper id="swiper"   indicator-dots="{{indicatorDots}}"autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{currentActivity.imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view id="activity_content" catchtouchstart="ontouchstart" catchtouchend="ontouchend" catchtouchmove="onshuai">
+      <text class="title">活动名称</text>
+      <text class="activity_name">{{currentActivity.name}}</text>
+      <text class="title">一句话介绍</text>
+      <text class="activity_description">{{currentActivity.description}}</text>
+  </view>
+  <button id="yueButton"  class="{{className}}" plain="true" type="primary"   catchtap="onYue" plain="true">约</button>
+  
+  <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
+    <text> {{areYouSB}} </text>
+    <input style="border: 1px solid #eeeeee" type="text" placeholder="输入您的微信id" bindinput="weixinIDChange" />
+  </modal>
+  <toast hidden="{{toastHidden}}" bindchange="toastChange" duration="1500">
+    设置成功！
+  </toast>
+  
+  <text class="prompt">不感兴趣？向右滑动查看下一个！</text>
+
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for="{{actionSheetItems}}">
+      <action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+  </action-sheet>
+</view>

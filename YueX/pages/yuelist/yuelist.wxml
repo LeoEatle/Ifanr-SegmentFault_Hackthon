@@ -1,0 +1,12 @@
+<view class="head">共有 {{messages.length}}条 通知</view>
+<view class="notice">
+    <view class="item" wx:for="{{messages}}" wx:for-item="msg">
+      <text class="name" animation="{{animationData}}">{{index + 1}}.{{msg.name}} </text>
+      <text class="action"> {{msg.action}} </text>
+      <text class="activity">{{msg.activity}} </text>
+    </view>    
+</view>
+
+<view class="buttons">
+  
+</view>

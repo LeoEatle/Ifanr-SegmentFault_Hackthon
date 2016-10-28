@@ -1,0 +1,56 @@
+.container{
+    padding: 40rpx;
+    justify-content: flex-start;
+}
+
+
+.desciption_text{
+    display: block;
+    margin-top: 1rpx;
+    font-size: 0.5rem;
+    color: #a9a9a9;
+    text-align: center;  
+}
+
+.activity_description{
+    display: block;
+    width: 100%;
+    margin-top: 10rpx;
+    padding-top: 10rpx;
+    border-top: 2px solid #888888;
+   
+}
+
+.title{
+    text-align: left;
+    font-size: 0.6rem;
+    color: #FF6666;
+    padding-top: 1rpx; 
+    border-top: 2px;
+}
+
+.post_button{
+    position: fixed;
+    bottom: 30px;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+
+#input_description{
+    font-size: 0.5rem;
+    box-shadow: 5px 5px 5px #888888;
+    border: 1px, solid, #a9a9a9;
+}
+
+.input_box ::after{
+    border: 1px, solid, #a9a9a9;
+}
+.nextline{
+    width: 100%;
+}
+.aiyo{
+    width: 100%;
+    text-align: left;
+}

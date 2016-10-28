@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/post/post",
+    "pages/yuelist/yuelist",
+    "pages/collectionList/collectionList"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF6666",
+    "navigationBarTitleText": "就问你约不约",
+    "navigationBarTextStyle":"white"
+  }
+}

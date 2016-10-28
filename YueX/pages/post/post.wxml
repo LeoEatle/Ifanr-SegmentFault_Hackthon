@@ -1,0 +1,32 @@
+<form bindsubmit="formSubmit">
+<view class = "container">
+    <view class="photo_upload">
+        <image name="imgurl" style="width: 300px; height: 300px; background-color: #eeeeee;" data-src="{{src}}" mode="aspectFill" src="{{src}}" bindtap="chooseImage"></image>
+        <input type="file" />
+        <text class="desciption_text">请上传能够描述您或您的活动需求的图片</text>
+        <text class="desciption_text">（建议第一张放个人相片，更容易引起他人兴趣哦）</text>
+    </view>
+    
+    <view class="activity_description">
+        <text class="title">请输入活动的名称</text>
+        <input style="border: 1px solid #eeeeee" class="input_box" type="text" placeholder="" name="activityName" bindchange="nameChange"/>
+        <text class="title">请用一句话描述你的活动</text>
+        <input style="border: 1px solid #eeeeee" class="input_box" type="text" placeholder="" name="activityDescription" bindchange="descriptionChange"/>
+        <text class="title">是否要限制异性参加 {{if_limit}}</text>
+        <view class="nextline"></view>
+        <text class="title" wx:if="{{if_limited}}">哎哟，不错哦</text>
+        <view class="nextline"></view>
+        <switch bindchange="switchchange" name="gender" checked="{{if_limited}}"/>
+    </view>
+
+    <button class="post_button" type="primary" formType="submit" size="default" plain="true"  disabled="{{disabled}}"> 约 </button>
+    <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange">
+        <text> {{areYouSB}} </text>
+        <input style="border: 1px solid #eeeeee" type="text" placeholder="输入您的微信id" bindchange="weixinIDChange" />
+    </modal>
+    <toast hidden="{{toastHidden}}" bindchange="toastChange" duration="1500">
+        设置成功！
+    </toast>
+</view>
+</form>
+

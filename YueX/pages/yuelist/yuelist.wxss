@@ -1,0 +1,38 @@
+.head{
+    text-align: center;
+    font-size: 0.8rem;
+    color: #a9a9a9;
+    border-bottom: 1px solid #a9a9a9;
+    font-weight: bold;
+    line-height: 40rpx;
+    height: 40rpx;
+    margin-top: 20rpx;
+
+}
+
+.notice .item{
+    display: block;
+    text-align: left;
+    line-height: 60rpx;
+    font-size: 0.8rem;
+    height: 60rpx;
+    border-bottom: 1px solid #a9a9a9;
+    padding-left: 20px;
+}
+.notice {
+   margin-top:10px;
+}
+
+.buttons button{
+  margin: 30px;
+}
+
+.name{
+    color:#000;
+}
+.action{
+    color:#000;
+}
+.activity{
+    color:#000;
+}

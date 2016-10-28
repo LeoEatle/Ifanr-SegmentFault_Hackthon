@@ -1,0 +1,8 @@
+{
+    "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "lightgreen",
+    "navigationBarTitleText": "就问你约不约",
+    "navigationBarTextStyle":"black"
+  }
+}
